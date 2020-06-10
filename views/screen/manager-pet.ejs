@@ -1,0 +1,40 @@
+<%- include('../partials/head', { title: 'Gerenciamento de Pets' }) %>
+<section class="d-flex" id="wrapper">
+
+  <%- include('../partials/sidebar', { sidebarIsVisible: true}) %>
+
+  <section class="container">
+    <div class="row justify-content-md-center">
+      <div class="main-container col-md-10 mb-5">
+        <div class="row justify-content-center my-3">
+          <h1>Gerenciamento de Pets</h1>
+        </div>
+        <div class="form-select d-flex align-items-center justify-content-end col-12 mb-5">
+          <label class="" for="nome">Status:</label>
+          <select class="form-control select-tipo ml-3" id="exampleFormControlSelect1">
+            <option value="">Todos</option>
+            <option value="ADOCAO">Adocao</option>
+            <option value="PERDIDO">Perdido</option>
+            <option value="ENCONTRADO">Encontrado</option>
+            <!--<option>Passarinho</option>
+            <option>Peixe</option> -->
+          </select>
+        </div>
+        <div class="row mb-4">
+          <% if (pets.length > 0) { %>
+            <% for(const pet of pets) { %>
+              <%- include("../components/card-pet-manager", { pet } )%>
+              <% } %>
+            <% } else { %>
+
+              <img src="/images/404pet.png" class="w-100" alt="Nenhum pet foi encontrado" />
+                           <% } %>
+
+        
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</section>
+<%- include('../partials/footer') %>

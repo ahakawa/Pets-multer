@@ -1,0 +1,52 @@
+<%- include('../partials/head', { title: 'Login' }) %>
+
+<section class="d-flex content-login" id="wrapper">
+  <%- include('../partials/sidebar', { sidebarIsVisible: false }) %>
+  <div class="container">
+    <div class="card card-container-login">
+      <div class="card-header text-center" id="card-header-login">
+        <h1 class="h5-card-header-login">Login</h1>
+      </div>
+      <!-- <%if(typeof errors != 'undefined') { %> -->
+      <!-- <%= JSON.stringify(errors) %> -->
+      <!-- <% } %> -->
+      <section class="section-form-login">
+        <img id="profile-img" class="profile-img-card" src="/images/icone_user.svg" />
+
+        <form action="/login" method="POST" class="form-signin">
+          <section id="error" class="row d-flex justify-content-center">
+            <!-- <span class="span-error d-none">
+              Email ou senha inválidos
+            </span> -->
+          </section>
+          <span id="reauth-email" class="reauth-email"></span>
+          <label class="login-email-label">Email:</label>
+          <input type="email" name="email" id="inputEmail" value="<%= usuario.email ? usuario.email : '' %>"
+            class="form-control text-center <%= errors.email ? 'is-invalid' : '' %>" placeholder="Digite seu email"
+            autofocus />
+          <%- include('../components/feedback-invalid', { msg: errors['email'] }) %>
+          <label class="login-senha-label">Senha:</label>
+          <input type="password" name="senha" id="inputPassword"
+            class="form-control text-center <%= errors.senha ? 'is-invalid' : '' %>" placeholder="Digite sua senha" />
+          <%- include('../components/feedback-invalid', { msg: errors['senha'] }) %>
+          <button class="btn btn-login" type="submit">
+            Entrar <i class="fas fa-sign-in-alt" id="icone-entrar"></i>
+          </button>
+        </form>
+        <!-- /form -->
+        <div class="row">
+          <div class="col">
+            <a href="/cadastrar" class="register-login">Registre-se</a>
+          </div>
+          <!-- <div class="col text-right">
+            <a href="/esqueci-senha" class="forgot ">Esqueci a senha</a>
+          </div> -->
+        </div>
+      </section>
+    </div>
+    <!-- /card-container -->
+  </div>
+  <!-- /container -->
+</section>
+<%- include('../partials/footer') %>
+<script src="javascripts/login.js"></script>

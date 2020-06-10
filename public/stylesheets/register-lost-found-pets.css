@@ -1,0 +1,87 @@
+.custom-file-label::after {
+  content: "Selecionar";
+}
+
+.container_registerPetLF {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formRegisterPet__rowContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.formRegisterPet__form .form-group {
+  margin: 10px 0;
+}
+
+.formRegisterPet__container {
+  /* width: 60%; */
+  /* margin: 0 auto; */
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 26px;
+  padding: 25px;
+}
+
+.orange--offset {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.registerPetLF__btn-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.register-pet-adoption {
+  /* position: relative; */
+  /* background-color: var(--cards-bg-color); */
+  /* top: var(--margin-header); */
+  box-shadow: var(--shadow-box);
+  margin-bottom: 70px;
+}
+
+.form-img-review img {
+  width: 142px;
+  height: 142px;
+  object-fit: cover;
+}
+
+.fotos {
+  display: flex;
+  height: 80px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  margin-right: 4px;
+}
+.fotos img {
+  height: 75px;
+}
+.fotos img {
+  border-radius: var(--border-radius);
+  border: 1px var(--title-bg-color) solid;
+}
+.fotos img {
+  border-radius: var(--border-radius);
+  border: 1px var(--title-bg-color) solid;
+}
+.fotos i {
+  font-size: 13px;
+  color: var(--title-bg-color);
+}
+
+.imgs-preview {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.imgs-preview img {
+  flex: 1;
+  max-width: 116.99px;
+}

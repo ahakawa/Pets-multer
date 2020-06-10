@@ -1,0 +1,93 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+ body {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  min-height: 94vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background-color: #FF8800 !important;
+}
+
+/* Altera a cor de fundo dos itens do menu */
+.list-group-item, .bg-light {
+  background-color: #FF8800 !important;
+}
+
+/* Altera a cor do texto dos links do menu */
+.list-group-item-action {
+  color: #fff;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+.logo-pets {
+  width: 150px;
+  height: 50px;
+}
+
+.sup-menu {
+  width: calc(100% - 180px); 
+  display: flex; 
+  justify-content: center;
+}
+
+.sup-menu__logo img {
+  height: 37px;
+}
+
+.logo-pets {
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.sibedar-navbar {
+  margin-bottom: var(--margin-header);
+}
+
+.dropdown-item.active, .dropdown-item:active, 
+.btn-primary.focus, .btn-primary:focus{
+  color: #000;
+  text-decoration: none;
+  background-color: #fff2cc;
+}
